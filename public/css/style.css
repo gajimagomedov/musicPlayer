@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background: #fff;
+}
+
+
+.page {
+    max-width: 980px;
+    padding: 0 10px;
+    margin: 0 auto;
+    margin-top: 60px;
+  
+   
+}
+
+.top-player {
+    position: fixed;
+    background: #348F63;
+    background: rgba(23, 22, 26, 0.9);
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.player-controls{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.player-controls__play {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    background: url(/img/sprite.png) no-repeat, #fff;
+    background-size: 200% 200%;
+    background-position: -50px 12px;
+}
+
+.player-controls__pause {
+    background-size: 200% 200%;
+    background-position: -21px 12px;
+}
+
+.player-controls__prev {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: url(/img/sprite.png) no-repeat, #fff;
+    background-size: 175% 175%;
+    background-position: 7px -26px;
+}
+
+.player-controls__next {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: url(/img/sprite.png) no-repeat, #fff;
+    background-size: 175% 175%;
+    background-position: -24px -26px;
+}
+
+.player-controls__play:active, .player-controls__next:active, .player-controls__prev:active {
+    transform: translateY(2%);
+}
+
+.player-controls__duration {
+    color: #fff;
+    position: absolute;
+    top: -4px;
+    right: 85px;
+}
+
+.player-controls__durability {
+    -webkit-appearance: none;
+    width: 250px;
+    height: 2px;
+    background: #fff;
+    margin: 0 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+
+.player-controls__durability::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: rgba(240,86,86,1);
+   
+}
+
+.player-controls__volume {
+    -webkit-appearance: none;
+    width: 50px;
+    cursor: pointer;
+    height: 2px;
+    background: #fff;
+    margin: 0 10px;
+    outline: none;
+}
+
+.player-controls__volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: rgba(240,86,86,1);
+}
+
+.main {
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 650px;
+}
+
+.list-music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.item-music {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 5px 10px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.item-music:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.item-music__play {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: url(/img/sprite.png) no-repeat, #fff;
+    background-size: 200% 200%;
+    background-position: -38px 9px;
+}
+
+.item-music__pause {
+    background-size: 200% 200%;
+    background-position: -15px 9px;
+}
+
+.item-music__name {
+    margin: 0 175px;
+}
+
+.item-music__edit {
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    background: url(/img/edit.png) no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    margin: 0 5px;
+}
+
+.item-music__delete {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: url(/img/delete.png) no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+.item-music__duration {
+    margin-left: 34px;
+}
+
+
+.form-music {
+    position: relative;
+    width: 100%;
+}
+
+.form-music__search {
+    width: 100%;
+    height: 30px;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #000;
+    text-align: center;
+    border-bottom: 2px solid rgba(23, 22, 26, 1);
+}
+
+.form-music__search:focus::placeholder {
+    opacity: 0;
+}
+
+.form-music__submit {
+    display: none;
+    position: absolute;
+    top:0;
+    right: 5px;
+    background: url(/img/close.png) no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.form-music__search:focus .form-music__submit {
+    display: block;
+}
+
+
+
+
+
